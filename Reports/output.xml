@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220822 20:03:25.265" rpa="false" schemaversion="3">
+<suite id="s1" name="LoginDDT" source="C:\Users\sbhutkar\PycharmProjects\RobotF_DataDriven\TestCases\LoginDDT.robot">
+<kw name="Open my Browser" library="login_resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${BROWSER}</arg>
+<arg>executable_path=C:\\Users\\sbhutkar\\PycharmProjects\\RobotF_DataDriven\\driver\\chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220822 20:03:25.870" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220822 20:03:25.870" endtime="20220822 20:03:27.028"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:25.870" endtime="20220822 20:03:27.029"/>
+</kw>
+<test id="s1-t1" name="TestValidLogin" line="13">
+<kw name="Invalid Login">
+<arg>admin@yourstore.com</arg>
+<arg>admin</arg>
+<kw name="Open Login Page" library="login_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220822 20:03:27.034" level="INFO">Opening url 'https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F'</msg>
+<status status="PASS" starttime="20220822 20:03:27.033" endtime="20220822 20:03:31.172"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220822 20:03:31.172" endtime="20220822 20:03:31.299"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:27.033" endtime="20220822 20:03:31.299"/>
+</kw>
+<kw name="Input username" library="login_resources">
+<arg>${Email1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220822 20:03:31.299" level="INFO">Typing text 'admin@yourstore.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20220822 20:03:31.299" endtime="20220822 20:03:31.381"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:31.299" endtime="20220822 20:03:31.381"/>
+</kw>
+<kw name="Input pwd" library="login_resources">
+<arg>${Password1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220822 20:03:31.381" level="INFO">Typing text 'admin' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20220822 20:03:31.381" endtime="20220822 20:03:31.436"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:31.381" endtime="20220822 20:03:31.436"/>
+</kw>
+<kw name="click login button" library="login_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button.button-1.login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220822 20:03:31.438" level="INFO">Clicking button 'css:button.button-1.login-button'.</msg>
+<status status="PASS" starttime="20220822 20:03:31.438" endtime="20220822 20:03:41.916"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:31.437" endtime="20220822 20:03:41.916"/>
+</kw>
+<kw name="Dashboard page should be visible" library="login_resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220822 20:03:41.937" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" starttime="20220822 20:03:41.917" endtime="20220822 20:03:41.937"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:41.916" endtime="20220822 20:03:41.937"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:27.032" endtime="20220822 20:03:41.937"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" starttime="20220822 20:03:27.029" endtime="20220822 20:03:41.937"/>
+</test>
+<test id="s1-t2" name="TestValidLogin" line="13">
+<kw name="Invalid Login">
+<arg>admin@yourstore.com</arg>
+<arg>admin</arg>
+<kw name="Open Login Page" library="login_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220822 20:03:41.941" level="INFO">Opening url 'https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F'</msg>
+<status status="PASS" starttime="20220822 20:03:41.941" endtime="20220822 20:03:42.366"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220822 20:03:42.367" endtime="20220822 20:03:42.370"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:41.941" endtime="20220822 20:03:42.370"/>
+</kw>
+<kw name="Input username" library="login_resources">
+<arg>${Email1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220822 20:03:42.371" level="INFO">Typing text 'admin@yourstore.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20220822 20:03:42.371" endtime="20220822 20:03:42.444"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:42.370" endtime="20220822 20:03:42.444"/>
+</kw>
+<kw name="Input pwd" library="login_resources">
+<arg>${Password1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220822 20:03:42.444" level="INFO">Typing text 'admin' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20220822 20:03:42.444" endtime="20220822 20:03:42.503"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:42.444" endtime="20220822 20:03:42.503"/>
+</kw>
+<kw name="click login button" library="login_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button.button-1.login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220822 20:03:42.505" level="INFO">Clicking button 'css:button.button-1.login-button'.</msg>
+<status status="PASS" starttime="20220822 20:03:42.505" endtime="20220822 20:03:44.437"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:42.504" endtime="20220822 20:03:44.437"/>
+</kw>
+<kw name="Dashboard page should be visible" library="login_resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220822 20:03:44.522" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" starttime="20220822 20:03:44.438" endtime="20220822 20:03:44.522"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:44.437" endtime="20220822 20:03:44.522"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:41.941" endtime="20220822 20:03:44.522"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" starttime="20220822 20:03:41.940" endtime="20220822 20:03:44.523"/>
+</test>
+<test id="s1-t3" name="TestValidLogin" line="13">
+<kw name="Invalid Login">
+<arg>admin@yourstore.com</arg>
+<arg>admin</arg>
+<kw name="Open Login Page" library="login_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220822 20:03:44.527" level="INFO">Opening url 'https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F'</msg>
+<status status="PASS" starttime="20220822 20:03:44.526" endtime="20220822 20:03:44.964"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220822 20:03:44.964" endtime="20220822 20:03:44.969"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:44.526" endtime="20220822 20:03:44.970"/>
+</kw>
+<kw name="Input username" library="login_resources">
+<arg>${Email1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220822 20:03:44.970" level="INFO">Typing text 'admin@yourstore.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20220822 20:03:44.970" endtime="20220822 20:03:45.052"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:44.970" endtime="20220822 20:03:45.052"/>
+</kw>
+<kw name="Input pwd" library="login_resources">
+<arg>${Password1}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220822 20:03:45.053" level="INFO">Typing text 'admin' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20220822 20:03:45.052" endtime="20220822 20:03:45.115"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:45.052" endtime="20220822 20:03:45.115"/>
+</kw>
+<kw name="click login button" library="login_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button.button-1.login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220822 20:03:45.116" level="INFO">Clicking button 'css:button.button-1.login-button'.</msg>
+<status status="PASS" starttime="20220822 20:03:45.116" endtime="20220822 20:03:46.950"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:45.115" endtime="20220822 20:03:46.950"/>
+</kw>
+<kw name="Dashboard page should be visible" library="login_resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Dashboard</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220822 20:03:46.975" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" starttime="20220822 20:03:46.951" endtime="20220822 20:03:46.975"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:46.950" endtime="20220822 20:03:46.975"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:44.526" endtime="20220822 20:03:46.975"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" starttime="20220822 20:03:44.525" endtime="20220822 20:03:46.976"/>
+</test>
+<kw name="Close Browsers" library="login_resources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220822 20:03:46.977" endtime="20220822 20:03:49.074"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:46.977" endtime="20220822 20:03:49.074"/>
+</kw>
+<status status="PASS" starttime="20220822 20:03:25.265" endtime="20220822 20:03:49.074"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="LoginDDT">LoginDDT</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220822 20:03:41.939" level="WARN">Multiple tests with name 'TestValidLogin' executed in suite 'LoginDDT'.</msg>
+<msg timestamp="20220822 20:03:44.525" level="WARN">Multiple tests with name 'TestValidLogin' executed in suite 'LoginDDT'.</msg>
+</errors>
+</robot>
